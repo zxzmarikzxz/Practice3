@@ -113,7 +113,9 @@ namespace Practice3
                 string str = ReadLine();
                 if (string.IsNullOrEmpty(str))
                 {
-                    Environment.Exit(0);
+                    WriteLine($"Загаданное число = {randomNumber}");
+                    ReadKey();
+                    break;
                 }
                 else
                 {
