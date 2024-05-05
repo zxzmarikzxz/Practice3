@@ -110,6 +110,7 @@ namespace Practice3
             int randomNumber = rand.Next(0, maxNumber);
             do
             {
+                WriteLine("Введите предполагаемое число");
                 string str = ReadLine();
                 if (string.IsNullOrEmpty(str))
                 {
