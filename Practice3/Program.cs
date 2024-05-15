@@ -47,6 +47,7 @@ namespace Practice3
                 case "q": sum += 10; break;
                 case "k": sum += 10; break;
                 case "t": sum += 10; break;
+                case "j": sum += 10; break;
                 default: Write("Такого числа не существует в игре\n"); i--; break;       
                 }
             }
@@ -65,27 +66,28 @@ namespace Practice3
             //Задание 3
             WriteLine("Введите целое число\n");
             int fullNumber = int.Parse(ReadLine());
-            int d = 2;
+            int d = 1;
             int c;
-            bool test;
-            while (d <= fullNumber - 1)
+            bool test = false;
+            while (d < fullNumber - 1)
             {
+                d++;
                 c = fullNumber % d;
-                
                 if (c == 0)
                 {
-                    test = true;
-                    WriteLine("Число не является простым");
-                    break;
-                    
+
+                   test = true;
+
                 }
-                else 
+                if (test == true)
                 {
-                    test = false;
-                    WriteLine("Число является простым");
-                    break;
+                    WriteLine("Число не является простым");
+                    break;  
                 }
-                
+                else if (d == fullNumber - 2 && test == false)
+                {
+                    WriteLine("Число является простым");
+                }
             }
             WriteLine("\nДля перехода к четвёртому заданию нажмите Enter");
             ReadLine();
